@@ -1,7 +1,18 @@
 import { Logo } from "./Logo";
-import { BarChart, CheckSquare, Cog, Flag, Home, LifeBuoy, Search, SquareStack, Users } from "lucide-react";
+import {
+  BarChart,
+  CheckSquare,
+  Cog,
+  Flag,
+  Home,
+  LifeBuoy,
+  Search,
+  SquareStack,
+  Users,
+} from "lucide-react";
 import { NavItem } from "./NavItem";
 import { UsedSpaceWidget } from "./UsedSpaceWidget";
+import { Profile } from "./Profile";
 export function Sidebar() {
   return (
     <aside className="flex flex-col gap-6 border-r border-zinc-200 px-5 py-8">
@@ -15,20 +26,23 @@ export function Sidebar() {
         />
       </div>
       <nav className="w-full space-y-0.5">
-        <NavItem title="Home" icon={Home}/>
-        <NavItem title="Dashboard" icon={BarChart}/>
-        <NavItem title="Projects" icon={SquareStack}/>
-        <NavItem title="Tasks" icon={CheckSquare}/>
-        <NavItem title="Reporting" icon={Flag}/>
-        <NavItem title="Users" icon={Users}/>
+        <NavItem title="Home" icon={Home} />
+        <NavItem title="Dashboard" icon={BarChart} />
+        <NavItem title="Projects" icon={SquareStack} />
+        <NavItem title="Tasks" icon={CheckSquare} />
+        <NavItem title="Reporting" icon={Flag} />
+        <NavItem title="Users" icon={Users} />
       </nav>
       <div className="mt-auto flex flex-col gap-6">
         <nav>
-          <NavItem title="Support" icon={LifeBuoy}/>
-          <NavItem title="Settings" icon={Cog}/>
+          <NavItem title="Support" icon={LifeBuoy} />
+          <NavItem title="Settings" icon={Cog} />
         </nav>
-        
-        <UsedSpaceWidget/>
+
+        <UsedSpaceWidget />
+
+        <div className="h-px w-full bg-zinc-200"></div>
+        <Profile />
       </div>
     </aside>
   );

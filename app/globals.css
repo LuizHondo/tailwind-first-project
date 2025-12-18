@@ -11,6 +11,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --grid-template-columns-app: minmax(18rem, 20rem) 1fr;
+  --grid-template-columns-profile: max-content 1fr min-content;
 }
 
 @media (prefers-color-scheme: dark) {
