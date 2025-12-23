@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { LogOut } from "lucide-react";
 
 export function Profile() {
@@ -6,7 +7,7 @@ export function Profile() {
       <img
         src="http://github.com/luizhondo.png"
         className="h-10 w-10 rounded-full"
-        alt=""
+        alt="Profile Image"
       />
       <div className="flex flex-col items-start truncate">
         <span className="truncate text-sm text-zinc-200">Luiz Maneiro</span>
