@@ -20,9 +20,9 @@ export function Sidebar() {
       <Logo />
       <InputRoot>
         <InputPrefix>
-          <Search className="h-5 w-5 text-zinc-300"/>
+          <Search className="h-5 w-5 text-zinc-300" />
         </InputPrefix>
-        <InputControl placeholder="Search"/>
+        <InputControl placeholder="Search" />
       </InputRoot>
       <nav className="w-full space-y-0.5">
         <NavItem title="Home" icon={Home} />
