@@ -1,6 +1,6 @@
 import { InputControl, InputPrefix, InputRoot } from "@/components/Input";
 import { SettingsTabs } from "@/components/SettingsTabs";
-import { Mail } from "lucide-react";
+import { Mail, User } from "lucide-react";
 
 export default function Home() {
   return (
@@ -80,10 +80,16 @@ export default function Home() {
               className="text-sm font-medium text-zinc-700 dark:text-zinc-100"
             >
               Your Photo
+              <span className="mt-0.5 block text-sm font-normal text-zinc-500 dark:text-zinc-400">
+                This will be displayed in your profile.
+              </span>
             </label>
-            <span className="mt-0.5 text-sm font-normal text-zinc-500 dark:text-zinc-400">
-              This will be displayed in your profile.
-            </span>
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-violet-50 dark:bg-violet-300">
+              <div className="flex items-start justify-center">
+                <User className="h-8 w-8 text-violet-400 dark:text-violet-600" />
+                <div></div>
+              </div>
+            </div>
           </div>
           <div className="grid-cols-form grid gap-3 pb-5">
             <label
@@ -125,10 +131,10 @@ export default function Home() {
               className="text-sm font-medium text-zinc-700 dark:text-zinc-100"
             >
               Bio
+              <span className="mt-0.5 block text-sm font-normal text-zinc-500 dark:text-zinc-400">
+                Write a short introduction.
+              </span>
             </label>
-            <span className="mt-0.5 text-sm font-normal text-zinc-500 dark:text-zinc-400">
-              Write a short introduction.
-            </span>
           </div>
           <div className="grid-cols-form grid gap-3 pb-5">
             <label
@@ -136,10 +142,10 @@ export default function Home() {
               className="text-sm font-medium text-zinc-700 dark:text-zinc-100"
             >
               Portfolio projects
+              <span className="mt-0.5 block text-sm font-normal text-zinc-500 dark:text-zinc-400">
+                Share a few snippets of your work.
+              </span>
             </label>
-            <span className="mt-0.5 text-sm font-normal text-zinc-500 dark:text-zinc-400">
-              Share a few snippets of your work.
-            </span>
           </div>
           <div className="flex items-center justify-end gap-2">
             <button
