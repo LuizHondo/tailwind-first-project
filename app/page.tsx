@@ -1,6 +1,6 @@
 import { InputControl, InputPrefix, InputRoot } from "@/components/Input";
 import { SettingsTabs } from "@/components/SettingsTabs";
-import { Mail, User } from "lucide-react";
+import { Mail, UploadCloud, User } from "lucide-react";
 
 export default function Home() {
   return (
@@ -76,7 +76,7 @@ export default function Home() {
           </div>
           <div className="grid-cols-form grid gap-3 pb-5">
             <label
-              htmlFor="email"
+              htmlFor="photo"
               className="text-sm font-medium text-zinc-700 dark:text-zinc-100"
             >
               Your Photo
@@ -84,11 +84,33 @@ export default function Home() {
                 This will be displayed in your profile.
               </span>
             </label>
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-violet-50 dark:bg-violet-300">
-              <div className="flex items-start justify-center">
-                <User className="h-8 w-8 text-violet-400 dark:text-violet-600" />
-                <div></div>
+            <div className="flex w-full flex-row gap-4">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-violet-50 dark:bg-violet-300">
+                <div className="flex items-start justify-center">
+                  <User className="h-8 w-8 text-violet-400 dark:text-violet-600" />
+                </div>
               </div>
+              <label
+                className="group hover:bg-violet-25 flex flex-1 cursor-pointer flex-col items-center gap-3 rounded-lg border border-zinc-300 px-6 py-4 text-center text-zinc-500 shadow-sm hover:border-violet-200 dark:border-zinc-500 dark:text-zinc-300 dark:hover:border-violet-700 dark:hover:bg-violet-600"
+                htmlFor="photo"
+              >
+                Selecione o arquivo
+                <div className="rounded-full border-6 border-zinc-50 bg-zinc-100 group-hover:border-violet-50 group-hover:bg-violet-100 dark:border-zinc-800 dark:bg-zinc-700 dark:group-hover:border-violet-700 dark:group-hover:bg-violet-800">
+                  <UploadCloud className="text-zinc-600 dark:text-zinc-500" />
+                </div>
+                <div className="flex flex-col items-center gap-1">
+                  <span>
+                    <span className="text-sm font-semibold text-violet-700 dark:text-violet-500 dark:group-hover:text-violet-950">
+                      Click to upload{" "}
+                    </span>
+                    or drag and drop
+                  </span>
+                  <span className="text-xs">
+                    SVG,PNG,JPG or GIF (max. 800x400px)
+                  </span>
+                </div>
+              </label>
+              <input type="file" className="sr-only" id="photo" />
             </div>
           </div>
           <div className="grid-cols-form grid gap-3 pb-5">
